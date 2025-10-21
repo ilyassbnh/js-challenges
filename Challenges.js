@@ -27,7 +27,7 @@
 // }
 //-------------challenge 5----------------------------
 // let motDePasse = "azerty";
-// if (motDePasse = "qwerty"){
+// if (motDePasse === "qwerty"){
 //     console.log("Mot de pass incorrect")   
 // }else {
 //     console.log("Acces Autorise")
@@ -59,7 +59,7 @@
 // }
 //-------------challenge 9----------------------------
 // let secret = 9;
-// if (secret == 7){
+// if (secret === 7){
 //     console.log("Bravo !");
 // }else{
 //     console.log("Rate !");
@@ -83,7 +83,17 @@
 //     console.log("Echoue")
 // }
 //-------------challenge 12----------------------------
-// let choix = 4 ;
+let choix = 4 ;
+switch (choix){
+    case 1 :
+        console.log("Cafe")
+        break;
+    case 2 :
+     console.log("The")
+        break;
+    default:
+     console.log("eau")
+}
 // if (choix == 1){
 //     console.log("Cafe")
 // }else if (choix == 2){
@@ -91,6 +101,8 @@
 // }else{
 //     console.log("eau")
 // }
+
+
 //-------------challenge 13----------------------------
 // let age = 20;
 // let tenuePropre = true;
