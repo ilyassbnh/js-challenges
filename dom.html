@@ -54,9 +54,8 @@
         <li>Item1</li>
         <li>Item2</li>
     </ul>
-    <button id="addItembtn" onclick="addition()">Add Item</button>
-    <button id="removeItemBtn" onclick="deleting()">Delete Item</button>
-
+    <button id="addItembtn" onclick="addition()">Add Item</button><br>
+    <button id="removeItemBtn" onclick="deleting()">Delete Item</button><br>
     <script>
         let i = 3
         const list = document.getElementById("myList")
@@ -73,7 +72,7 @@
     <!------------ challenge 7 ----------------->
     <input type="text" name="challenge" id="myInput" placeholder="Type Something">
     <p id="displayPara">Default</p>
-    <button id="updateTextBtn" onclick="updating()">Update</button>
+    <button id="updateTextBtn" onclick="updating()">Update</button><br>
     <script>
         function updating() {
             const inp = document.getElementById("myInput").value
@@ -81,8 +80,70 @@
             
         }
     </script>
+<!----------------- DOM Manipulation Exercises with User Input ------------->
+<!----------------- challenge 1 --------->
+<input type="text" id="nameInput" placeholder="Enter your name"><br>
+<button id="greetBtn" onclick="hola()">Say Hello</button>
+<p id="greeting"></p>
+<script>
+    function hola() {
+        const hlo = document.getElementById("nameInput").value
+        const paragh = document.getElementById("greeting").innerHTML="Hello, "+hlo+" !"
+    }
+</script>
+<!----------------- challenge 2 --------->
+<input type="text" id="ageInput" name="inputAge" placeholder="Enter your age">
+<button id="checkAgeBtn"onclick="checkAge()">check age</button>
+<p id="ageResult"></p>
+<script>
+    function checkAge() {
+        const inptAge = document.getElementById("ageInput").value
+        const pAge = document.getElementById("ageResult")
+        let age = inptAge
+        if (age >= 18) {
+            pAge.innerHTML="you are an adult"
+        }else{
+            pAge.innerHTML="you are a minor"
+        }
+    }
+</script>
 
+<!----------------- challenge 3 --------->
+<input type="text" placeholder="Your name" id="userName">
+<input type="text" placeholder="Favorite color" id="favColor">
+<button id="welcomeBtn" onclick="twoInputs()">Show Message</button>
+<p id="welcomeMsg"></p>
+<script>
+    function twoInputs() {
+        const inpt1 = document.getElementById("userName").value
+        const inpt2 = document.getElementById("favColor").value
+        document.getElementById("welcomeMsg").innerHTML="Hello "+inpt1+" ! Your favorite color is "+inpt2
+    }
+</script>
+<!----------------- challenge 4 --------->
+<input type="text" placeholder="Type your paragraph" id="inpRev">
+<p id="reversedParag"></p>
+<button onclick="reversed()">Reverse</button><br>
+<script>
+    function reversed() {
+        const revInp = document.getElementById("inpRev").value
+        const revP = document.getElementById("reversedParag")
+        revP.innerHTML = revInp.split('').reverse().join('')
+    }
+</script>
 
+<!----------------- challenge 5 --------->
+<input type="text" id="charCount" placeholder="Type your paragraph to be counted">
+<button id="charBnt" onclick="countChara()">Count</button>
+<p id="charaP"></p>
+
+<script>
+function countChara() {
+    const countInp = document.getElementById("charCount").value;
+    const countP = document.getElementById("charaP");
+    countP.innerHTML = countInp.length;
+}
+</script>
 
 
 
