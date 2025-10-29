@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!------------ challenge 1 ----------------->
+    <p id="myPara">Hello world!</p>
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+        function changeColor() {
+            const t = document.getElementById("myPara")
+            t.style.color = "red"
+        }
+    </script>
+
+    <!------------ challenge 2 ----------------->
+    <div id="box">this is the box</div>
+    <button id="toggleBtn" onclick="hideShow()">Hide/show</button>
+    <script>
+        function hideShow() {
+            const txt = document.getElementById("box").style
+            if (txt.display === 'none') {
+                txt.display = 'block'
+            } else {
+                txt.display = 'none'
+            }
+
+        }
+    </script>
+    <!------------ challenge 3 ----------------->
+    <div id="textPara">Old text</div>
+    <button id="updateBtn" onclick="textUpdate()">Updated text</button>
+    <script>
+        function textUpdate() {
+            document.getElementById("textPara").innerHTML = "New text"
+        }
+    </script>
+    <!------------ challenge 4 ----------------->
+    <div id="colorBox" style="width: 100px;height: 100px;"></div>
+    <button id="colorBtn" onclick="changeBackColor()">Change color</button>
+    <script>
+        function changeBackColor() {
+            let color = 'rgb(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ')'
+            document.getElementById("colorBox").style.backgroundColor = color
+        }
+    </script>
+    <!------------ challenge 5&6----------------->
+    <ul id="myList">
+        <li>Item1</li>
+        <li>Item2</li>
+    </ul>
+    <button id="addItembtn" onclick="addition()">Add Item</button>
+    <button id="removeItemBtn" onclick="deleting()">Delete Item</button>
+
+    <script>
+        let i = 3
+        const list = document.getElementById("myList")
+        
+        function addition() {
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode("Item" + i++))
+            list.appendChild(li)
+        }
+        function deleting() {
+            list.removeChild(list.lastChild);
+        }
+    </script>
+    <!------------ challenge 7 ----------------->
+    <input type="text" name="challenge" id="myInput" placeholder="Type Something">
+    <p id="displayPara">Default</p>
+    <button id="updateTextBtn" onclick="updating()">Update</button>
+    <script>
+        function updating() {
+            const inp = document.getElementById("myInput").value
+            const p = document.getElementById("displayPara").innerHTML=inp
+            
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>
