@@ -123,13 +123,17 @@
 <!----------------- challenge 4 --------->
 <input type="text" placeholder="Type your paragraph" id="inpRev">
 <p id="reversedParag"></p>
-<button onclick="reversed()">Reverse</button><br>
+<button id="reverseBtn" type="submit">Reverse</button><br>
 <script>
-    function reversed() {
-        const revInp = document.getElementById("inpRev").value
+        const revInp = document.getElementById("inpRev")
         const revP = document.getElementById("reversedParag")
-        revP.innerHTML = revInp.split('').reverse().join('')
-    }
+        const revBtn = document.getElementById("reverseBtn")
+
+        revBtn.addEventListener(("click"),function () {
+            revP.textContent = revInp.value.split("").reverse().join("")
+            
+        })  
+        
 </script>
 
 <!----------------- challenge 5 --------->
